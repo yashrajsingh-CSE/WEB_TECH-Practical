@@ -1,0 +1,37 @@
+/* 1️⃣ Universal Selector — applies to ALL elements */
+* {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* 2️⃣ ID Selector — targets element with a unique ID */
+#main-heading {
+    color: white;
+    background-color: teal;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* 3️⃣ Class Selector — targets all elements with the same class */
+.highlight {
+    color: darkblue;
+    background-color: #e0f7fa;
+    border-left: 5px solid blue;
+    padding: 10px;
+}
+
+/* 4️⃣ Descendant Selector — targets elements inside another element */
+.descendant-example p {
+    background-color: lightyellow;
+    border: 2px dashed orange;
+    padding: 10px;
+}
+
+/* 5️⃣ Group Selector — applies same styles to multiple selectors */
+h2, strong {
+    color: purple;
+    text-transform: uppercase;
+}

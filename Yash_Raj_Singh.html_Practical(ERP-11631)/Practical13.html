@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function and Scope Demo</title>
+</head>
+<body>
+
+<h2>Output:</h2>
+<p id="output"></p>
+
+<script>
+    let resultText = "";
+
+    // User-defined function
+    function calculateSum(a, b) {
+        var result = a + b;
+        return result;
+    }
+
+    // Function call
+    var sum = calculateSum(10, 20);
+    resultText += "Sum: " + sum + "<br><br>";
+
+    // Scope demonstration
+    function scopeDemo() {
+        var x = 10;
+        let y = 20;
+        const z = 30;
+
+        if (true) {
+            var x = 100;
+            let y = 200;
+            const z = 300;
+
+            resultText += "Inside block:<br>";
+            resultText += "x = " + x + "<br>";
+            resultText += "y = " + y + "<br>";
+            resultText += "z = " + z + "<br><br>";
+        }
+
+        resultText += "Outside block:<br>";
+        resultText += "x = " + x + "<br>";
+        resultText += "y = " + y + "<br>";
+        resultText += "z = " + z + "<br>";
+    }
+
+    // Invoke function
+    scopeDemo();
+
+    // Display output on webpage
+    document.getElementById("output").innerHTML = resultText;
+</script>
+
+</body>
+</html>
+

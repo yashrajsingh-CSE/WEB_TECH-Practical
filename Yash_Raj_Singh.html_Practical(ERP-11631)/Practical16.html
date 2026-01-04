@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show / Hide & Toggle Class Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            margin-top: 10px;
+            background-color: #e3f2fd;
+            border: 1px solid #2196f3;
+            display: none;
+        }
+
+        .highlight {
+            background-color: #c8e6c9;
+            border-color: #4caf50;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Show / Hide and Toggle CSS Class</h2>
+
+<button onclick="toggleBox()">Show / Hide Box</button>
+<button onclick="toggleHighlight()">Toggle Highlight</button>
+
+<div id="contentBox" class="box">
+    This is a content box.
+</div>
+
+<script>
+    function toggleBox() {
+        const box = document.getElementById("contentBox");
+
+        if (box.style.display === "none" || box.style.display === "") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+
+    function toggleHighlight() {
+        const box = document.getElementById("contentBox");
+        box.classList.toggle("highlight");
+    }
+</script>
+
+</body>
+</html>

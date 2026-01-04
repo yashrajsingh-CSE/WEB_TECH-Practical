@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #box {
+            width: 200px;
+            height: 120px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 120px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mouse and Keyboard Event Handling</h2>
+
+<button id="addBtn">Add Events</button>
+<button id="removeBtn">Remove Events</button>
+
+<div id="box">Hover or Click Me</div>
+
+<p id="message"></p>
+
+<script>
+    const box = document.getElementById("box");
+    const message = document.getElementById("message");
+    const addBtn = document.getElementById("addBtn");
+    const removeBtn = document.getElementById("removeBtn");
+
+    // Event handler functions
+    function mouseOverHandler() {
+        box.style.backgroundColor = "lightgreen";
+        message.innerHTML = "Mouse over the box";
+    }
+
+    function mouseOutHandler() {
+        box.style.backgroundColor = "lightblue";
+        message.innerHTML = "Mouse left the box";
+    }
+
+    function clickHandler() {
+        alert("Box clicked!");
+    }
+
+    function keyDownHandler(event) {
+        message.innerHTML = "Key pressed: " + event.key;
+    }
+
+    // Add event listeners
+    function addEvents() {
+        box.addEventListener("mouseover", mouseOverHandler);
+        box.addEventListener("mouseout", mouseOutHandler);
+        box.addEventListener("click", clickHandler);
+        document.addEventListener("keydown", keyDownHandler);
+        message.innerHTML = "Events added";
+    }
+
+    // Remove event listeners
+    function removeEvents() {
+        box.removeEventListener("mouseover", mouseOverHandler);
+        box.removeEventListener("mouseout", mouseOutHandler);
+        box.removeEventListener("click", clickHandler);
+        document.removeEventListener("keydown", keyDownHandler);
+        message.innerHTML = "Events removed";
+    }
+
+    addBtn.addEventListener("click", addEvents);
+    removeBtn.addEventListener("click", removeEvents);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Arithmetic Operations</title>
+    <script>
+        function arithmeticOperations() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+
+            let sum = num1 + num2;
+            let difference = num1 - num2;
+            let product = num1 * num2;
+            let quotient = num1 / num2;
+
+            document.write("<h2>Arithmetic Results</h2>");
+            document.write("Addition = " + sum + "<br>");
+            document.write("Subtraction = " + difference + "<br>");
+            document.write("Multiplication = " + product + "<br>");
+            document.write("Division = " + quotient + "<br>");
+        }
+    </script>
+</head>
+<body onload="arithmeticOperations()">
+</body>
+</html>

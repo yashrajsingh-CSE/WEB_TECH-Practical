@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Using JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 6px;
+            margin: 6px 0;
+        }
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+    <label>Name:</label>
+    <input type="text" id="name" oninput="validateName()">
+    <span id="nameError"></span>
+
+    <label>Email:</label>
+    <input type="text" id="email" oninput="validateEmail()">
+    <span id="emailError"></span>
+
+    <label>Password:</label>
+    <input type="password" id="password" oninput="validatePassword()">
+    <span id="passwordError"></span>
+
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function validateName() {
+        let name = document.getElementById("name").value;
+        let error = document.getElementById("nameError");
+
+        if (name.length < 3) {
+            error.innerHTML = "Name must be at least 3 characters";
+            return false;
+        } else {
+            error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function validateEmail() {
+        let email = document.getElementById("email").value;
+        let error = document.getElementById("emailError");
+
+        if (!email.includes("@") || !email.includes(".")) {
+            error.innerHTML = "Enter a valid email address";
+            return false;
+        } else {
+            error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function validatePassword() {
+        let password = document.getElementById("password").value;
+        let error = document.getElementById("passwordError");
+
+        if (password.length < 6) {
+            error.innerHTML = "Password must be at least 6 characters";
+            return false;
+        } else {
+            error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function validateForm() {
+        if (validateName() && validateEmail() && validatePassword()) {
+            alert("Form submitted successfully!");
+            return true;
+        } else {
+            alert("Please correct the errors before submitting.");
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>

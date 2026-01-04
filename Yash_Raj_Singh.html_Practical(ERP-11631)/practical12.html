@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conditions & Loops in JavaScript</title>
+    <script>
+        function demo() {
+
+            document.write("<h2>Conditional Statements & Loops</h2>");
+
+            // a) Eligible to vote or not
+            let age = parseInt(prompt("Enter your age:"));
+            if (age >= 18) {
+                document.write("a) You are eligible to vote.<br>");
+            } else {
+                document.write("a) You are NOT eligible to vote.<br>");
+            }
+
+            // b) Number is even or odd
+            let num = parseInt(prompt("Enter a number to check even/odd:"));
+            if (num % 2 === 0) {
+                document.write("b) " + num + " is Even<br>");
+            } else {
+                document.write("b) " + num + " is Odd<br>");
+            }
+
+            // c) Sum of first 10 natural numbers
+            let sumNatural = 0;
+            for (let i = 1; i <= 10; i++) {
+                sumNatural += i;
+            }
+            document.write("c) Sum of first 10 natural numbers = " + sumNatural + "<br>");
+
+            // d) Sum of first 10 even numbers
+            let sumEven = 0, count = 0, number = 2;
+            while (count < 10) {
+                sumEven += number;
+                number += 2;
+                count++;
+            }
+            document.write("d) Sum of first 10 even numbers = " + sumEven + "<br>");
+
+            // e) Check prime number using do...while
+            let primeNum = parseInt(prompt("Enter a number to check if it's prime:"));
+            let isPrime = true;
+            let i = 2;
+
+            if (primeNum <= 1) {
+                isPrime = false;
+            } else {
+                do {
+                    if (primeNum % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                    i++;
+                } while (i < primeNum);
+            }
+
+            if (isPrime)
+                document.write("e) " + primeNum + " is a Prime Number<br>");
+            else
+                document.write("e) " + primeNum + " is NOT a Prime Number<br>");
+        }
+    </script>
+</head>
+<body onload="demo()">
+</body>
+</html>

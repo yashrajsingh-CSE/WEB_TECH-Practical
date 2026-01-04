@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .box {
+            padding: 10px;
+            border: 1px solid #333;
+            margin-top: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="heading">Original Heading</h2>
+
+    <p class="info">This is a paragraph selected using querySelector.</p>
+
+    <div id="content" class="box">
+        Original Content
+    </div>
+
+    <button onclick="manipulateDOM()">Change Content</button>
+
+    <script>
+        function manipulateDOM() {
+            // getElementById()
+            var heading = document.getElementById("heading");
+            heading.innerHTML = "Heading Changed using getElementById()";
+
+            // querySelector()
+            var paragraph = document.querySelector(".info");
+            paragraph.innerHTML = "Paragraph updated using querySelector()";
+
+            // innerHTML
+            var divContent = document.getElementById("content");
+            divContent.innerHTML = "<strong>Content replaced using innerHTML</strong>";
+        }
+    </script>
+
+</body>
+</html>

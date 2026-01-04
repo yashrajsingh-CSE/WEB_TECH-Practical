@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Create and Manipulate Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+        ul {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic List Example</h2>
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="modifyItem()">Modify First Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+
+    <ul id="itemList">
+        <li>Item 1</li>
+    </ul>
+
+    <script>
+        // Append a new element
+        function addItem() {
+            const li = document.createElement("li");
+            li.innerText = "New Item";
+            document.getElementById("itemList").appendChild(li);
+        }
+
+        // Modify an existing element
+        function modifyItem() {
+            const list = document.getElementById("itemList");
+            if (list.firstElementChild) {
+                list.firstElementChild.innerText = "Modified Item";
+            }
+        }
+
+        // Remove an element
+        function removeItem() {
+            const list = document.getElementById("itemList");
+            if (list.lastElementChild) {
+                list.removeChild(list.lastElementChild);
+            }
+        }
+    </script>
+
+</body>
+</html>

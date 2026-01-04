@@ -1,0 +1,52 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background.jpg'); /* Replace with your own image */
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid gold;
+}
+/* Intro Section */
+.intro {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 30px auto;
+    width: 80%;
+    padding: 20px;
+    border-left: 8px solid teal;
+    border-radius: 10px;
+}
+/* Box Model Demonstration */
+.box {
+    background-color: #fafafa;
+    border: 3px solid #0077cc;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+}
+.box.second {
+    border-color: #ff6600;
+    margin: 40px;
+    padding: 25px;
+}
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+}
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}

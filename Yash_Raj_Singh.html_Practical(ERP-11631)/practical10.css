@@ -1,0 +1,74 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+/* Header */
+.header {
+  background-color: teal;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+/* Highlight text using span */
+.highlight {
+  color: gold;
+  font-weight: bold;
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+.nav-item {
+  color: white;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.nav-item:hover {
+  background-color: #555;
+}
+/* Layout using Divs */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.sidebar {
+  flex: 1;
+  min-width: 200px;
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+.content {
+  flex: 3;
+  background-color: white;
+  padding: 15px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+/* Span styling for inline emphasis */
+.keyword {
+  color: teal;
+  font-weight: bold;
+  background-color: #e0f7fa;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.love {
+  color: red;
+  font-size: 1.2em;
+}
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
